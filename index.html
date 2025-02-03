@@ -18,18 +18,34 @@
                 <option value="bubble">Bubble Sort</option>
                 <option value="insertion">Insertion Sort</option>
                 <option value="selection">Selection Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
             </select>
+
+            <div id="controls">
+                <label for="arraySize">Número de elementos:</label>
+                <input type="number" id="arraySize" min="5" max="100" value="10" step="1">
+            </div>
             <!-- Botón para generar un nuevo array aleatorio -->
             <button id="generate-array">Generar Nuevo Array</button>
         </div>
         <!-- Contenedor donde se mostrarán las barras que representan el array -->
         <div id="array-container"></div>
+         <!-- Contenedor para mostrar los contadores de comparaciones e intercambios -->
+        <div class="stats">
+            <p>Comparaciones: <span id="comparisonCount">0</span></p>
+            <p>Intercambios: <span id="swapCount">0</span></p>
+        </div>
         <!-- Botones para controlar la ejecución del algoritmo -->
         <div class="buttons">
             <button id="start-button">Iniciar Ordenamiento</button>
             <button id="step-button">Siguiente Paso</button>
             <button id="auto-button">Ordenar Automáticamente</button>
+            <button id="reset-array">Reiniciar Array</button>
         </div>
+
+        <!-- Contenedor dinámico para mostrar la descripción -->
+        <p id="algorithm-info" class="description"></p>
     </div>
     <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
